@@ -35,7 +35,7 @@ public class Login extends Activity {
 				
 				showToast("Please wait...", Toast.LENGTH_SHORT);
 				
-				if(mUsername.equals("guest") && mUsername.equals("guest")){
+				if(mUsername.getText().toString().equals("guest") && mPassword.getText().toString().equals("guest")){
                     
                 } else {
                 	showToast("Please check your Username and/or Passsword", Toast.LENGTH_LONG);
@@ -48,8 +48,6 @@ public class Login extends Activity {
     	LayoutInflater inflater = getLayoutInflater();
 		View layout = inflater.inflate(R.layout.toast_layout, (ViewGroup) findViewById(R.id.toast_layout_root));
 
-		ImageView image = (ImageView) layout.findViewById(R.id.image);
-		image.setImageResource(R.drawable.ic_launcher);
 		TextView text = (TextView) layout.findViewById(R.id.text);
 		text.setText(msg);
 
